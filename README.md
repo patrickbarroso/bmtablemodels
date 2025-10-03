@@ -19,7 +19,7 @@ Para avaliar os modelos pré-treinados mencionados, o software utilizou o métod
 •	Para operações de TSR: as coordenadas em pixels de cada célula (bounding box ou bbox) no formato [x1, y1, x2, y2]. Sendo x1, y1 o canto superior esquerdo da célula e o x2,y2 o canto inferior direito da célula. <br>
 •	Para operações de TE: uma estrutura de dados com o conteúdo textual contido em cada célula , que pode ser um conjunto/lista de dataframes ou um conjunto/lista de listas. <br>
 
-As imagens utilizadas na avaliação dos modelos foram oriundas de certificados de calibração (em torno de 400 arquivos no formato PDF), que totalizou em torno de 700 imagens de tabelas. Os certificados não foram disponibilizados neste repositório devido a acordos de confidencialidade firmados com os laboratórios.
+As imagens utilizadas na avaliação dos modelos foram oriundas de certificados de calibração (em torno de 400 arquivos no formato PDF), que totalizou em torno de 1130 imagens de tabelas. Os certificados não foram disponibilizados neste repositório devido a acordos de confidencialidade firmados com os laboratórios.
 
 ## Caminho das pastas de configuração
 
