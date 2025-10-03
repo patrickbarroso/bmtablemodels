@@ -26,17 +26,21 @@ As imagens utilizadas na avaliação dos modelos foram oriundas de certificados 
 | Variável                | Caminho                                          | Definição                                                                                    | 
 |-------------------------|--------------------------------------------------|----------------------------------------------------------------------------------------------|
 |   CERT_PATH             | "/MyDrive/DataSets/Certificados/In/"             | Caminho de entrada das pastas dos certificados dos laboratórios                              |    
-|   DIROUT_<MODEL NAME>   | "/MyDrive/DataSets/Certificados/Out/<MODEL-NAME>"| Caminho de saída para geração das pastas por laboratório e respectivos arquivos de metadados |  
-|   CERT_PATH             | "/MyDrive/DataSets/Certificados/In/"             | Diretório dos arquivos do GT - Ground Truth (referência para comparação das tabelas)         | 
+|   DIR_OUT/MODEL         | "/MyDrive/DataSets/Certificados/Out/<MODEL-NAME>"| Caminho de saída para geração das pastas por laboratório e respectivos arquivos de metadados |  
+|   GT_PATH             | "/MyDrive/DataSets/Certificados/GT/In/"             | Diretório dos arquivos do GT - Ground Truth (referência para comparação das tabelas)         | 
 
 ## Arquivos Python (.ipynb)
 
-Cada arquivo .ipynb disponibilizado na pasta /evaluation é referente a um modelo e todos seguem a estrutura:
+Cada arquivo .ipynb disponibilizado na pasta /Evaluation é referente a um modelo e todos seguem a estrutura:
 
 1.	Funções Pré-processamento para MAIN: instalação e importação de bibliotecas e definição das funções de suporte para execução da função principal MAIN responsável por gerar os arquivos de anotação (.INFO, .METADADOS, .BBOX, .HTML) <br>
 2.	Código MAIN para Rodar em Lote: função principal que varre os arquivos da pasta de entrada dos documentos PDF (CERT_PATH) para executar as operações de TR, TSR e TE e refletir nos arquivos de anotação. <br>
 3.	TEDS – Cálculo Para O Modelo: instalação e importação de bibliotecas e funções para cálculo do TED e demais estatísticas necessárias. <br>
 4.	Função MAIN para gerar estatísticas: geração dos arquivos dos arquivos de estatísticas de cada tabela .STATS e a geração do relatório de sumário  <br>
+
+## Arquivos Python (.py)
+
+Os arquivos em Python (Py_files) são versões mais recentes do código em relação aos arquivos .ipynb da pasta /Evaluation, caso queira rodar em ambiente IDE.
 
 ## Processo de anotação das tabelas
 
