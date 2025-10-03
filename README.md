@@ -145,7 +145,7 @@ DIMENSION = Dimensão da tabela (quantidade de linhas x quantidade de colunas) <
 QTDCELLS = Quantidade de células (resultado da multiplicação de quantidade de linhas por quantidade de colunas) <br>
 PERCACERTOSBBOXINFO = Percentual de acerto das coordenadas da tabelas em relação ao GT. Para possibilitar este cálculo deve ser considerado calcular a similaridade de cada número das coordenadas com sua referência (GT) e depois calcular a média total. O cálculo de similaridade é feita através da métrica Intersection Over Union (IoU). A área de overlap mapeia a área entre a bbox prevista e a bbox do GT. A área de união abrange tanto a bbox prevista quanto a bbox da GT.  A IoU mede o grau de sobreposição entre as áreas previstas e reais, fornecendo uma pontuação simples e eficaz para o desempenho da localização. 
 
-<i>Exemplo: se uma coordenada de uma célula de análise é [112, 1205, 1188, 1492] e a GT é [114, 1206, 1189, 1492], a similaridade de cada numero respectivamente seria: 33,33%,  50%, 50% e 100%, sendo o resultado final a média = 58,33%. </i>
+![Intersection Over Union (IoU)](Img/IOU.png)
 
 Estatísticas para TSR – Table Structure Recognition 
 
