@@ -1,15 +1,15 @@
 # BMTABLEMODELS
-
+https://arxiv.org/abs/2410.17725
 ## Definição
 
 BMTABLEMODELS é um software direcionado para avaliar a qualidade e precisão de modelos deep learning pré-treinados. Tais modelos são responsáveis pela execução de 3 tarefas: (i) detecção de tabelas (TR – Table Recognition); (ii) detecção da estrutura das tabelas (TSR – Table Structure Recognition) e; (iii) extração do conteúdo das células das tabelas (TE – Table Extraction). A relação de datasets e modelos pré-treinados avaliados constam abaixo: 
 
 | Dataset                                                                                                                 | Modelo                      | Operações      | Autor                         |   Ano   | Qtd Tabelas |  Qtd Imagens | 
 |--------------------|------------------------------------------------|---------------------------------------------------------|-------------------------------------------------------------|-------------|-------------|--------------|
-| [COCO 2017](https://cocodataset.org/#download)                       | DEtection TRansformer (DETR) |  TR             | [Carion, 2020](https://arxiv.org/abs/2108.07732)              |  2020        |      118 k |       118k   |     
+| [COCO](https://cocodataset.org/#download)                       | DEtection TRansformer (DETR) |  TR             | [Carion, 2020](https://arxiv.org/abs/2108.07732)              |  2020        |      118 k |       118k   |     
 | [Marmot](https://www.icst.pku.edu.cn/szwdclyjs/sjzy/index.htm)       | Tablenet                     |  TR, TSR, TE    | [Paliwal, 2020](https://arxiv.org/pdf/2001.01469.pdf)         |  2020        |      2000 |     2000   |      
 | [PubTables-1M](https://huggingface.co/datasets/bsmock/pubtables-1m)  | Table Transformer (TATR)     |  TR, TSR, TE    | [Smock, 2022](https://ieeexplore.ieee.org/document/9879666)   |  2022        |      1 M+ |       1 M+    |          
-| [Roboflow](https://universe.roboflow.com/mohamed-traore-2ekkp/table-extraction-pdf/dataset/2?ref=roboflow2huggingface) | YOLO |  TR   | [Zhang, 2022](https://link.springer.com/article/10.1007/s10032-022-00400-z) |  2022  |   238 |   238   | 
+| [COCO](https://cocodataset.org/#download)   | YOLOv11 |  TR   | [Khanam, 2024](https://arxiv.org/abs/2410.17725) |  2024  |   118 k  |   118 k    | 
 
 ## Avaliação dos Modelos
 
@@ -139,7 +139,7 @@ Estatísticas para TR – Table Recognition:
 
 DIMENSION = Dimensão da tabela (quantidade de linhas x quantidade de colunas) <br>
 QTDCELLS = Quantidade de células (resultado da multiplicação de quantidade de linhas por quantidade de colunas) <br>
-PERCACERTOSBBOXINFO = Percentual de acerto das coordenadas da tabelas em relação ao GT. Para possibilitar este cálculo deve ser considerado calcular a similaridade de cada número das coordenadas com sua referência (GT) e depois calcular a média total. O cálculo de similaridade entre dois números é feito pela fórmula: <i>(1 / (1 + (abs(num1 - num2)))) * 100 </i>.
+PERCACERTOSBBOXINFO = Percentual de acerto das coordenadas da tabelas em relação ao GT. Para possibilitar este cálculo deve ser considerado calcular a similaridade de cada número das coordenadas com sua referência (GT) e depois calcular a média total. O cálculo de similaridade é feita através da métrica Intersection Over Union (IoU). A área de overlap mapeia a área entre a bbox prevista e a bbox do GT. A área de união abrange tanto a bbox prevista quanto a bbox da GT.  A IoU mede o grau de sobreposição entre as áreas previstas e reais, fornecendo uma pontuação simples e eficaz para o desempenho da localização. 
 
 <i>Exemplo: se uma coordenada de uma célula de análise é [112, 1205, 1188, 1492] e a GT é [114, 1206, 1189, 1492], a similaridade de cada numero respectivamente seria: 33,33%,  50%, 50% e 100%, sendo o resultado final a média = 58,33%. </i>
 
