@@ -1,5 +1,5 @@
 # BMTABLEMODELS
-https://arxiv.org/abs/2410.17725
+
 ## Definição
 
 BMTABLEMODELS é um software direcionado para avaliar a qualidade e precisão de modelos deep learning pré-treinados. Tais modelos são responsáveis pela execução de 3 tarefas: (i) detecção de tabelas (TR – Table Recognition); (ii) detecção da estrutura das tabelas (TSR – Table Structure Recognition) e; (iii) extração do conteúdo das células das tabelas (TE – Table Extraction). A relação de datasets e modelos pré-treinados avaliados constam abaixo: 
